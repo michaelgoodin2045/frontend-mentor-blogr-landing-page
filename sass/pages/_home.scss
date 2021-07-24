@@ -1,0 +1,22 @@
+@use '../base' as b;
+@use '../utilities/' as *;
+
+body {
+    width: 100%;
+    height: auto;
+}
+
+.container {
+    width: 375px;
+    height: 4599px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    @include breakpoint(desktop) {
+        width: 1440px;
+        height: 3400px;
+        background: #fbfbfb;
+    }
+}

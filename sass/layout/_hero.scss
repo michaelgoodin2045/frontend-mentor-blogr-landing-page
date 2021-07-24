@@ -1,0 +1,64 @@
+@use '../base' as *;
+@use '../utilities/' as u;
+
+.hero {
+    width: 375px;
+    height: 590px;
+    border-bottom-left-radius: 100px;
+    background-image: url('../images/bg-pattern-intro.svg'), linear-gradient(170deg, $clr--grad-very-light-red, $clr--grad-light-red);
+    background-position-x: 35%;
+    background-position-y: 38%;
+    background-size: 1500px;
+    background-blend-mode: normal;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    color: $clr--white;
+    line-height: 1.4;
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
+    padding-bottom: 8rem;
+    text-align: center;
+    @include u.breakpoint(desktop) {
+        width: 1440px;
+        background-image: url('../images/bg-pattern-intro.svg'), linear-gradient(90deg, $clr--grad-very-light-red 15%, $clr--grad-light-red 60%);
+    background-position-x: 24.7%;
+    background-position-y: 52%;
+    background-size: 3200px;
+    background-blend-mode: normal;
+    }
+    & h1 {
+        font-size: 2.1rem;
+        font-weight: 600;
+        @include u.breakpoint(desktop) {
+            font-size: 3.75rem;
+        }
+    }
+    & h3 {
+        font-size: 1.1rem;
+        font-weight: 300;
+        @include u.breakpoint(desktop) {
+            font-size: 1.25rem;
+        }
+    }
+
+    & .title {
+        margin-top: 2rem;
+        @include u.breakpoint(desktop) {
+            margin-top: 5rem;
+        }
+    }
+
+    & .subtitle {
+        margin-top: 1rem;
+    }
+
+    & .information {
+        margin-top: 3rem;
+        margin-right: -5px;
+        @include u.breakpoint(desktop) {
+            margin-top: 4rem;
+        }
+    }
+}

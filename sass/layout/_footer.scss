@@ -1,0 +1,77 @@
+@use '../base' as *;
+@use '../utilities' as u;
+
+.footer {
+    width: 375px;
+    height: 920px;
+    background-color: $clr--very-dark-black-blue;
+    color: $clr--white;
+    text-align: center;
+    border-top-right-radius: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    @include u.breakpoint(desktop) {
+        width: 1440px;
+        height: 350px;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    & .title {
+        margin: 5rem 0 5rem 0;
+        font-family: $ff--ubuntu;
+        @include u.breakpoint(desktop) {
+            margin-top: 4rem;
+        }
+    }
+    & .lists {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        @include u.breakpoint(desktop) {
+            width: 1085px;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: space-evenly;
+            margin-top: 4.5rem;
+            margin-left: 18px;
+        }
+        & .list {
+            margin-bottom: 3rem;
+            @include u.breakpoint(desktop) {
+                text-align: left;
+            }
+           & .heading {
+               font-size: 1.15rem;
+               font-weight: 700;
+               margin-bottom: 2rem;
+               @include u.breakpoint(desktop) {
+                   font-size: 1rem;
+                   margin-bottom: 2.4rem;
+               }
+           }
+        }
+        & li {
+            list-style: none;
+            margin-bottom: 1rem;
+            @include u.breakpoint(desktop) {
+                margin-bottom: 1.1rem;
+            }
+        }
+        & a {
+            font-family: $ff--ubuntu;
+            font-size: 1.2rem;
+            text-decoration: none;
+            color: $clr--gray-blue;
+            &:hover {
+                text-decoration: underline;
+            }
+            @include u.breakpoint(desktop) {
+                font-size: .95rem;
+            }
+        }
+    }
+}

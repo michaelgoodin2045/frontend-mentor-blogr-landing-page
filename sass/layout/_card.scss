@@ -1,0 +1,33 @@
+@use '../base' as *;
+@use '../utilities' as u;
+
+.card {
+    width: 100%;
+    text-align: center;
+    @include u.breakpoint(desktop) {
+        text-align: left;
+    }
+    & .subtitle {
+        width: 90%;
+        line-height: 1.2;
+        margin-top: 3rem;
+        @include u.breakpoint(desktop) {
+            & h2 {
+                font-size: 1.75rem;
+                letter-spacing: 0em;
+            }
+        }
+    }
+    & .blurb {
+        line-height: 1.75;
+        color: $clr--very-dark-gray-blue;
+        font-weight: 400;
+        margin-top: 1.5rem;
+        font-size: 16px;
+        letter-spacing: .03rem;
+        @include u.breakpoint(desktop) {
+            letter-spacing: .025rem;
+            margin-bottom: 5rem;
+        }
+    }
+}

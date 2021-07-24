@@ -1,0 +1,72 @@
+@use '../base' as *;
+@use '../utilities' as u;
+
+.section-one {
+    width: 375px;
+    height: 1200px;
+    background: $clr--white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 2.2rem;
+    padding-right: 2.2rem;
+    margin-bottom: 4rem;
+    padding-top: 75px;
+    z-index: 1;
+    @include u.breakpoint(desktop) {
+        width: 1440px;
+        height: 1030px;
+        background: transparent;
+        flex-direction: column;
+        justify-content: center;
+        overflow: hidden;
+        padding-top: 0;
+        margin-bottom: 0;
+        & .section-one-box {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: center;
+            align-items: flex-start;
+            padding-top: 50px;
+            margin-right: -400px;
+            & .card-box {
+                width: 600px;
+                margin-right: -300px;
+                padding-left: 25px;
+                padding-right: 40px;
+            }
+        }
+    }
+    
+    & h2 {
+        font-size: 1.6rem;
+        font-weight: 600;
+        color: $clr--very-dark-blue;
+        margin-left: 25px;
+        @include u.breakpoint(desktop) {
+            margin-left: 0;
+        }
+    }
+    & .title {
+        margin-top: 6rem;
+        margin-bottom: 3rem;
+        @include u.breakpoint(desktop) {
+            margin-top: 5rem;
+            margin-bottom: 2rem;
+            letter-spacing: 0em;
+            & h2 {
+                font-size: 2.5rem;   
+            }
+        }
+    }
+}
+
+.image-one {
+    content: url('../images/illustration-editor-mobile.svg');
+    @include u.breakpoint(desktop) {
+        content: url('../images/illustration-editor-desktop.svg');
+        margin-left: 350px;
+        margin-top: -190px;
+    }
+}

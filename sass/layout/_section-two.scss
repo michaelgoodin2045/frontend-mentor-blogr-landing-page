@@ -1,0 +1,28 @@
+@use '../base' as *;
+@use '../utilities' as u;
+
+.section-two {
+    position: relative;
+    width: 375px;
+    height: 170px;
+    background-color: $clr--white;
+    @include u.breakpoint(desktop) {
+        width: 1440px;
+        height: 0;
+    }
+}
+
+.image-two {
+    display: inline-block;
+    content: url('../images/illustration-phones.svg');
+    width: 375px;
+    margin-top: -10px;
+    margin-bottom: -90px;
+    z-index: 2;
+    @include u.breakpoint(desktop) {
+        width: 550px;
+        margin-top: -70px;
+        margin-left: 130px;
+        z-index: 2;
+    }
+}

@@ -1,0 +1,50 @@
+@use '../base' as *;
+@use '../utilities' as u;
+
+.btn {
+    text-decoration: none;
+    border-radius: 3rem;
+}
+
+.btn-one {
+    background: $clr--white;
+    color: $clr--light-red;
+    padding: .8em 1em;
+    margin-right: .5rem;
+    font-family: $ff--ubuntu;
+    font-weight: 700;
+    letter-spacing: 0;
+
+}
+
+.btn-two {
+    background: none;
+    color: $clr--white;
+    font-family: $ff--ubuntu;
+    font-weight: 700;
+    padding: .8em 1.5em;
+    border: 1px solid $clr--white;
+    margin-left: .5rem;
+}
+
+.btn-three {
+    font-family: $ff--overpass;
+    background: linear-gradient(90deg, $clr--grad-very-light-red, $clr--grad-light-red);
+    color: $clr--white;
+    padding: 1em 2.5em;
+    @include u.breakpoint(desktop) {
+        background: $clr--white;
+        color: $clr--light-red;
+    }
+}
+
+.btn-one:hover,
+.btn-three:hover {
+    background: $clr--very-light-red;
+    color: $clr--white;
+}
+
+.btn-two:hover {
+    background: $clr--white;
+    color: $clr--very-light-red;
+}
